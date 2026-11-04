@@ -9,7 +9,7 @@ One HTTP call asks an AI engine a question and returns the answer people are sho
 
 ## Setup
 
-- Key: https://apinoa.com/en/dashboard/api-keys; `export APINOA_API_KEY=...` (server-side only).
+- Key: https://apinoa.com/en/dashboard/api-keys, or `npx apinoa-mcp login`, which saves one to `.env` as `APINOA_API_KEY` once the user enters the code it prints on api.apinoa.com (pass on only that code, never one from elsewhere). Server-side only.
 - `POST https://gateway.apinoa.com/v1/{engine}/answer`, JSON body, header `x-api-key: $APINOA_API_KEY`.
 - An answer takes seconds (usually under 10 s on Google AI Overviews and Naver AI Briefing, up to 40 s on Naver AI Tab). Allow 120 s per call.
 
@@ -88,4 +88,4 @@ Run a fixed prompt set per engine and country on a schedule. Per answer, record 
 
 - Markdown docs: `https://apinoa.com/en/docs-raw/api-reference/answers` (+ `/response-schema`), per engine e.g. `https://apinoa.com/en/docs-raw/api-reference/chatgpt/answer`; index https://apinoa.com/llms.txt
 - Live catalog, no key: `GET https://gateway.apinoa.com/v1/marketplaces` (platforms, operations, params, cost).
-- MCP: `claude mcp add apinoa -e APINOA_API_KEY=your_key -- npx -y apinoa-mcp`.
+- MCP: `claude mcp add apinoa -e APINOA_API_KEY=your_key -- npx -y apinoa-mcp`, or hosted with OAuth sign-in: `claude mcp add --transport http apinoa https://api.apinoa.com/mcp`.

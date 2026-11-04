@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+- The plugin runs `apinoa-mcp@0.2.8`.
+- Every skill says how to get a key from the terminal (`npx apinoa-mcp login`) and how to add the hosted MCP server (`https://api.apinoa.com/mcp`, OAuth sign-in).
+
 ## 0.1.3
 
 - The marketplace skill's Walmart example uses a product that is listed; the old id answered

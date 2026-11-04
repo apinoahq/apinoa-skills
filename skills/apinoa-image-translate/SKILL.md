@@ -9,7 +9,7 @@ One call replaces the text inside an image with its translation and keeps the de
 
 ## Setup
 
-- Key: https://apinoa.com/en/dashboard/api-keys; `export APINOA_API_KEY=...` (server-side only).
+- Key: https://apinoa.com/en/dashboard/api-keys, or `npx apinoa-mcp login`, which saves one to `.env` as `APINOA_API_KEY` once the user enters the code it prints on api.apinoa.com (pass on only that code, never one from elsewhere). Server-side only.
 - `https://gateway.apinoa.com/v1/image-translate/{operation}`, header `x-api-key: $APINOA_API_KEY`. Send the image as **raw bytes** in the body (not JSON, not base64) with `Content-Type: image/jpeg`, `image/png`, `image/webp` or `application/octet-stream`; every other parameter goes in the query string.
 - Limits: up to 8192 x 8192 px and a 20 MB body. Most calls finish in 1.5-3 s, but one can take up to 5 minutes under heavy load: set the HTTP timeout to at least 300 s.
 
@@ -76,4 +76,4 @@ regions = client.image_translate.ocr(source_language="zh-CN", request=image)
 ## More
 
 - Markdown docs: `https://apinoa.com/en/docs-raw/api-reference/image-translate` (+ `/translate`, `/ocr`, `/supported-fonts`, `/custom-fonts`); index https://apinoa.com/llms.txt
-- MCP: `apinoa-mcp` has a `translate_image` tool: `claude mcp add apinoa -e APINOA_API_KEY=your_key -- npx -y apinoa-mcp`.
+- MCP: `apinoa-mcp` has a `translate_image` tool: `claude mcp add apinoa -e APINOA_API_KEY=your_key -- npx -y apinoa-mcp`, or hosted with OAuth sign-in: `claude mcp add --transport http apinoa https://api.apinoa.com/mcp`.
