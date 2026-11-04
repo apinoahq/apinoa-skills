@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "apinoa-mcp"
+        "apinoa-mcp@0.2.6"
       ],
       "env": {
         "APINOA_API_KEY": "${user_config.api_key}"

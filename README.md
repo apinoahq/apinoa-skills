@@ -39,6 +39,14 @@ Set `APINOA_API_KEY` in the environment the agent runs in. For the MCP server as
 codex mcp add apinoa --env APINOA_API_KEY=your_key -- npx -y apinoa-mcp
 ```
 
+## What data it sends
+
+The skills and the MCP server send only what a call needs to `https://gateway.apinoa.com`: the operation and its
+parameters (a search query, a product id or URL, a username, a prompt, an image you ask to translate) with your API
+key in the `x-api-key` header. Nothing is sent to any other service. apinoa keeps request records for billing and
+support as described in the [privacy policy](https://apinoa.com/en/privacy). The plugin stores your key in Claude
+Code's secure credential storage and passes it only to the MCP server it starts (`npx -y apinoa-mcp@<version>`).
+
 ## More
 
 - [Documentation](https://apinoa.com/docs), also as markdown for agents: [llms.txt](https://apinoa.com/llms.txt)
