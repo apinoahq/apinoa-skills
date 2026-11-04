@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- The plugin runs `apinoa-mcp@0.2.7`.
+
 ## 0.1.1
 
 - The plugin runs `apinoa-mcp@0.2.6`, a pinned version, instead of the newest one.
