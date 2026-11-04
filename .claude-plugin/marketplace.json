@@ -1,0 +1,51 @@
+{
+  "name": "apinoa",
+  "owner": {
+    "name": "apinoa",
+    "email": "hello@apinoa.com"
+  },
+  "metadata": {
+    "description": "The apinoa plugin: product, social, search and AI-answer data for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "apinoa",
+      "source": "./",
+      "description": "Amazon, Walmart, Shopify, TikTok, Instagram, YouTube, Reddit, Google, Bing, Naver, ChatGPT, Gemini and more as normalized JSON: product data, social posts, search results and AI answers through one API, with a skill per family and the apinoa MCP server.",
+      "author": {
+        "name": "apinoa",
+        "email": "hello@apinoa.com"
+      },
+      "homepage": "https://apinoa.com/docs/sdks",
+      "repository": "https://github.com/apinoahq/apinoa-skills",
+      "license": "MIT",
+      "keywords": [
+        "web-data",
+        "scraping",
+        "ecommerce",
+        "amazon",
+        "walmart",
+        "shopify",
+        "aliexpress",
+        "tiktok",
+        "instagram",
+        "youtube",
+        "reddit",
+        "x",
+        "linkedin",
+        "serp",
+        "google",
+        "bing",
+        "naver",
+        "ai-answers",
+        "chatgpt",
+        "gemini",
+        "ai-overviews",
+        "geo",
+        "image-translation",
+        "mcp"
+      ],
+      "category": "development"
+    }
+  ]
+}

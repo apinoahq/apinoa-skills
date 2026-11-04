@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "apinoa": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "apinoa-mcp"
+      ],
+      "env": {
+        "APINOA_API_KEY": "${user_config.api_key}"
+      }
+    }
+  }
+}
