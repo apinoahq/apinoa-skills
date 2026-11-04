@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+- The marketplace skill's Walmart example uses a product that is listed; the old id answered
+  `404 PRODUCT_NOT_FOUND`.
+
 ## 0.1.2
 
 - The plugin runs `apinoa-mcp@0.2.7`.

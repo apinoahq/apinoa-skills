@@ -47,7 +47,7 @@ curl "https://gateway.apinoa.com/v1/amazon/search?query=wool+socks&priceMax=30" 
 import { ApinoaClient } from "@apinoa/sdk"; // npm install @apinoa/sdk
 const apinoa = new ApinoaClient(); // reads APINOA_API_KEY
 const { data } = await apinoa.amazon.search({ query: "wool socks", priceMax: 30 });
-const product = await apinoa.walmart.product({ id: "5089499913" });
+const product = await apinoa.walmart.product({ id: "18256507800" });
 ```
 
 ```python
