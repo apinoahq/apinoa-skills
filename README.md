@@ -18,8 +18,9 @@ You need an API key: create one at [apinoa.com/en/dashboard/api-keys](https://ap
 
 ## Claude Code
 
-The plugin bundles the five skills and the [apinoa MCP server](https://github.com/apinoahq/apinoa-mcp), and asks
-for your key when you enable it.
+The plugin bundles the five skills and connects Claude Code to the hosted apinoa MCP server at
+`https://api.apinoa.com/mcp`. Nothing extra runs on your computer. Run `/mcp` and choose `apinoa` to sign in with your
+apinoa account.
 
 ```text
 /plugin marketplace add apinoahq/apinoa-skills
@@ -41,11 +42,11 @@ codex mcp add apinoa --env APINOA_API_KEY=your_key -- npx -y apinoa-mcp
 
 ## What data it sends
 
-The skills and the MCP server send only what a call needs to `https://gateway.apinoa.com`: the operation and its
-parameters (a search query, a product id or URL, a username, a prompt, an image you ask to translate) with your API
-key in the `x-api-key` header. Nothing is sent to any other service. apinoa keeps request records for billing and
-support as described in the [privacy policy](https://apinoa.com/en/privacy). The plugin stores your key in Claude
-Code's secure credential storage and passes it only to the MCP server it starts (`npx -y apinoa-mcp@<version>`).
+The skills send only what a call needs to `https://gateway.apinoa.com`: the operation and its parameters (a search
+query, a product id or URL, a username, a prompt, an image you ask to translate) with your API key in the `x-api-key`
+header. The plugin's MCP server sends the same to `https://api.apinoa.com/mcp`, which calls the gateway for it. Nothing
+is sent to any other service. apinoa keeps request records for billing and support as described in the
+[privacy policy](https://apinoa.com/en/privacy). Claude Code keeps the plugin's sign-in in its own credential storage.
 
 ## More
 

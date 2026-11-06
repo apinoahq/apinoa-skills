@@ -1,7 +1,7 @@
 {
   "name": "apinoa",
   "displayName": "apinoa",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Amazon, Walmart, Shopify, TikTok, Instagram, YouTube, Reddit, Google, Bing, Naver, ChatGPT, Gemini and more as normalized JSON: product data, social posts, search results and AI answers through one API, with a skill per family and the apinoa MCP server.",
   "author": {
     "name": "apinoa",
@@ -41,13 +41,5 @@
   "documentationUrl": "https://apinoa.com/docs",
   "supportUrl": "https://apinoa.com/en/about#contact",
   "privacyPolicyUrl": "https://apinoa.com/en/privacy",
-  "termsOfServiceUrl": "https://apinoa.com/en/terms",
-  "userConfig": {
-    "api_key": {
-      "type": "string",
-      "title": "apinoa API key",
-      "description": "Create one at https://apinoa.com/en/dashboard/api-keys. Calls are billed to it at the normal rates; failed calls are not billed.",
-      "sensitive": true
-    }
-  }
+  "termsOfServiceUrl": "https://apinoa.com/en/terms"
 }

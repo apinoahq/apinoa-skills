@@ -1,14 +1,8 @@
 {
   "mcpServers": {
     "apinoa": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "apinoa-mcp@0.2.8"
-      ],
-      "env": {
-        "APINOA_API_KEY": "${user_config.api_key}"
-      }
+      "type": "http",
+      "url": "https://api.apinoa.com/mcp"
     }
   }
 }

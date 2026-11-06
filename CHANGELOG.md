@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+
+- The plugin connects to the hosted MCP server (`https://api.apinoa.com/mcp`) instead of starting `apinoa-mcp` on your computer.
+- You sign in with your apinoa account through `/mcp`; the plugin no longer asks for an API key when enabled.
+
 ## 0.1.4
 
 - The plugin runs `apinoa-mcp@0.2.8`.
