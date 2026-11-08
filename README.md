@@ -1,9 +1,9 @@
 # apinoa skills and Claude Code plugin
 
 Agent skills for [apinoa](https://apinoa.com): product data from Amazon, Walmart, Shopify stores, AliExpress
-and TikTok Shop; posts, profiles and comments from TikTok, Instagram, YouTube, Reddit, X, Threads and LinkedIn;
-search results from Google, Bing, Naver, Baidu, Yandex and more; and the answers ChatGPT, Gemini, Google AI
-Overviews, Google AI Mode and Naver give to a prompt. Each comes back as normalized JSON from one API with one
+and TikTok Shop; posts, profiles and comments from TikTok, Instagram, YouTube, Reddit, X, Threads, LinkedIn and Facebook (Pages and the Ad Library);
+search results from Google, Bing, Naver, Baidu, Yandex and more; the answers ChatGPT, Gemini, Copilot, Google AI
+Overviews, Google AI Mode and Naver give to a prompt; and what a company's website runs on. Each comes back as normalized JSON from one API with one
 key, so a coding agent calls it instead of writing and maintaining a scraper. Failed calls are not billed.
 
 | Skill | Use it for |
@@ -12,13 +12,14 @@ key, so a coding agent calls it instead of writing and maintaining a scraper. Fa
 | [`apinoa-social`](skills/apinoa-social/SKILL.md) | Social profiles, posts, comments, communities and media |
 | [`apinoa-serp`](skills/apinoa-serp/SKILL.md) | Search results, places, app stores, Google Shopping and Trends |
 | [`apinoa-answers`](skills/apinoa-answers/SKILL.md) | AI-engine answers with their sources and the brands they mention |
+| [`apinoa-company`](skills/apinoa-company/SKILL.md) | What a company's website runs on, and the vendors its domain holds accounts with |
 | [`apinoa-image-translate`](skills/apinoa-image-translate/SKILL.md) | Translating the text inside images, such as product photos |
 
 You need an API key: create one at [apinoa.com/en/dashboard/api-keys](https://apinoa.com/en/dashboard/api-keys).
 
 ## Claude Code
 
-The plugin bundles the five skills and connects Claude Code to the hosted apinoa MCP server at
+The plugin bundles the six skills and connects Claude Code to the hosted apinoa MCP server at
 `https://api.apinoa.com/mcp`. Nothing extra runs on your computer. Run `/mcp` and choose `apinoa` to sign in with your
 apinoa account.
 

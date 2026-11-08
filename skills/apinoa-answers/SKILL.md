@@ -1,6 +1,6 @@
 ---
 name: apinoa-answers
-description: "ChatGPT, Gemini, Google AI Overviews, Google AI Mode, Naver AI Briefing and Naver AI Tab answers to a prompt: the answer text and markdown, citations mapped to the text, every source shown (cited or not), product and place cards (ads included), the brands, products and places the engine itself marked, and follow-up suggestions, as one normalized JSON type from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants to track brand visibility in AI answers (GEO, AEO, LLM visibility, AI search monitoring), check whether ChatGPT, Gemini or Google's AI mentions or cites a brand, product or URL, compare share of voice across AI engines, or collect AI Overview citations for SEO; asks to scrape or automate ChatGPT, Gemini, Google AI Overviews or Naver's AI answers; or an attempt to automate those sites was blocked or hit a captcha."
+description: "ChatGPT, Gemini, Microsoft Copilot, Google AI Overviews, Google AI Mode, Naver AI Briefing and Naver AI Tab answers to a prompt: the answer text and markdown, citations mapped to the text, every source shown (cited or not), product and place cards (ads included), the brands, products and places the engine itself marked, and follow-up suggestions, as one normalized JSON type from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants to track brand visibility in AI answers (GEO, AEO, LLM visibility, AI search monitoring), check whether ChatGPT, Gemini, Copilot or Google's AI mentions or cites a brand, product or URL, compare share of voice across AI engines, or collect AI Overview citations for SEO; asks to scrape or automate ChatGPT, Gemini, Copilot, Google AI Overviews or Naver's AI answers; or an attempt to automate those sites was blocked or hit a captcha."
 ---
 
 # apinoa AI Answers API
@@ -19,6 +19,7 @@ One HTTP call asks an AI engine a question and returns the answer people are sho
 |---|---|:-:|:-:|:-:|
 | `chatgpt` | US DE GB AT KR AU JP CA FR IT | Y | Y | |
 | `gemini` | US DE GB AT KR AU JP CA FR IT | Y | | |
+| `copilot` (Microsoft Copilot Search) | US | | | |
 | `google-ai-mode` | US | Y | | Y |
 | `google-aio` (AI Overviews) | US | | | Y |
 | `naver-ai-tab` | KR | Y | | |
@@ -48,7 +49,7 @@ const apinoa = new ApinoaClient(); // reads APINOA_API_KEY
 const { data } = await apinoa.chatgpt.answer({ prompt: "Best running shoes for beginners?", country: "US" });
 const cited = data.sources.filter((s) => s.cited).map((s) => s.url);
 const aio = await apinoa.googleAio.answer({ prompt: "best running shoes for beginners" });
-// also apinoa.gemini, apinoa.googleAiMode, apinoa.naverAiTab, apinoa.naverAiBrief
+// also apinoa.gemini, apinoa.copilot, apinoa.googleAiMode, apinoa.naverAiTab, apinoa.naverAiBrief
 ```
 
 ```python
@@ -57,7 +58,7 @@ client = Apinoa()  # reads APINOA_API_KEY
 ans = client.chatgpt.answer(prompt="Best running shoes for beginners?", country="US")
 brands = [m.name for m in ans.data.mentions if m.kind == "brand"]
 aio = client.google_aio.answer(prompt="best running shoes for beginners")
-# also client.gemini, client.google_ai_mode, client.naver_ai_tab, client.naver_ai_brief
+# also client.gemini, client.copilot, client.google_ai_mode, client.naver_ai_tab, client.naver_ai_brief
 ```
 
 ## Response: `Answer`

@@ -5,13 +5,13 @@
     "email": "hello@apinoa.com"
   },
   "metadata": {
-    "description": "The apinoa plugin: product, social, search and AI-answer data for Claude Code."
+    "description": "The apinoa plugin: product, social, search, AI-answer and company data for Claude Code."
   },
   "plugins": [
     {
       "name": "apinoa",
       "source": "./",
-      "description": "Amazon, Walmart, Shopify, TikTok, Instagram, YouTube, Reddit, Google, Bing, Naver, ChatGPT, Gemini and more as normalized JSON: product data, social posts, search results and AI answers through one API, with a skill per family and the apinoa MCP server.",
+      "description": "Amazon, Walmart, Shopify, TikTok, Instagram, YouTube, Reddit, Facebook, Google, Bing, Naver, ChatGPT, Gemini, Copilot and more as normalized JSON: product data, social posts, search results, AI answers and company tech stacks through one API, with a skill per family and the apinoa MCP server.",
       "author": {
         "name": "apinoa",
         "email": "hello@apinoa.com"

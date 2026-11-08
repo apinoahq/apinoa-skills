@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.6
+
+- New skill `apinoa-company`: a website's technologies and the vendors its domain holds accounts with, from the domain.
+- `apinoa-social` covers Facebook (Pages and the Ad Library) and LinkedIn jobs by `company`.
+- `apinoa-answers` covers Microsoft Copilot.
+
 ## 0.1.5
 
 - The plugin connects to the hosted MCP server (`https://api.apinoa.com/mcp`) instead of starting `apinoa-mcp` on your computer.

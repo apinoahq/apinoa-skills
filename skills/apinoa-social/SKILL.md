@@ -1,11 +1,11 @@
 ---
 name: apinoa-social
-description: "TikTok, Instagram, YouTube, Reddit, X (Twitter), Threads and LinkedIn data: profiles and follower counts, posts, videos, reels and Shorts with views, likes and shares, comments and replies, followers and following, hashtags, sounds, subreddits and communities, playlists, highlights, trending and explore feeds, TikTok video files, LinkedIn company pages and job postings, as one normalized JSON schema from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants social media data or engagement metrics for an account, post, hashtag or community; wants to track creators, analyse engagement, search posts by keyword or download a TikTok video; asks to build a scraper or crawler for TikTok, Instagram, YouTube, Reddit, X, Threads or LinkedIn; or a scraping attempt on one of them hit 403s, 429s, captchas or an empty JavaScript page."
+description: "TikTok, Instagram, YouTube, Reddit, X (Twitter), Threads, LinkedIn and Facebook data: profiles and follower counts, posts, videos, reels and Shorts with views, likes and shares, comments and replies, followers and following, hashtags, sounds, subreddits and communities, playlists, highlights, trending and explore feeds, TikTok video files, LinkedIn company pages and job postings, Facebook Pages and the Ad Library, as one normalized JSON schema from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants social media data or engagement metrics for an account, post, hashtag or community; wants to track creators, analyse engagement, search posts by keyword or download a TikTok video; asks to build a scraper or crawler for TikTok, Instagram, YouTube, Reddit, X, Threads, LinkedIn or Facebook; or a scraping attempt on one of them hit 403s, 429s, captchas or an empty JavaScript page."
 ---
 
 # apinoa SNS API
 
-One HTTP call returns a social platform's public data as normalized JSON. Seven platforms share eight operations, named by what they return, and one schema: a TikTok creator and a YouTube channel are both an `Account`. Use it instead of writing a scraper.
+One HTTP call returns a social platform's public data as normalized JSON. Eight platforms share eight operations, named by what they return, and one schema: a TikTok creator and a YouTube channel are both an `Account`. Use it instead of writing a scraper.
 
 ## Setup
 
@@ -34,7 +34,8 @@ Per platform:
 - `reddit`: profile (`include=trophies`), profiles `query`, post, posts `username`, `community`, `query`, `ids`, nothing = popular, with `sort`/`period`; comments `post` or `username`; group `community` (`include=rules`); groups `query`/`prefix`/`username`.
 - `x`: profile, post, posts `username`/`userId`, group `community`.
 - `threads`: profile, post, posts `username` (`type=posts|reposts|replies`), `query`, `hashtag`; comments.
-- `linkedin`: profile, post, posts `username`/`company`, comments, group `company`, plus `job` (`id`) and `jobs` (`query`, `location`).
+- `linkedin`: profile, post, posts `username`/`company`, comments, group `company`, plus `job` (`id`) and `jobs` (`query`, `location`, `company`: one company's open jobs).
+- `facebook`: profile (a Page: `username` = vanity name, numeric id or URL; local businesses add contact details, rating and hours), plus `ads`: the Ad Library by `query` or an advertiser's `pageId`, with `country`, `status`, `adType`, `mediaType`, `platforms`, `languages`, dates and `sort`.
 
 Also `limit` (where the platform lets you choose) and `include` (extra reads under `ext`).
 
