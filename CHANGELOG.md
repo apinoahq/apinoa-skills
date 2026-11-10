@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8
+
+- `apinoa-social`: a sound's own audio file — `group` with `sound` returns the track (`audio.url`, title, artist, length) for TikTok and Instagram.
+
 ## 0.1.7
 
 - New skill `apinoa-ocr`: the OCR API (`POST /v1/ocr`), the text in an image with each region's position and confidence, one credit per image.

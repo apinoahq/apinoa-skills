@@ -22,7 +22,7 @@ One HTTP call returns a social platform's public data as normalized JSON. Eight 
 | `post` | `Post` | `id` |
 | `posts` | `Page<Post>` | `username`, `query`, `hashtag`, `community`, `sound`, `location`, `company`, `playlist`, `relatedTo`, `ids`; nothing = trending feed |
 | `comments` | `Page<Comment>` | `post` (+`comment` for replies), or a user's |
-| `group` | `Group` | a community, hashtag, sound, location or company |
+| `group` | `Group` | a community, hashtag, sound (with its audio file: `audio.url`, title, artist, length — TikTok and Instagram), location or company |
 | `groups` | `Page<Group>` | community search, or an account's playlists/highlights/communities |
 | `media` | file | TikTok `post`: the MP4 or picture, base64 |
 
