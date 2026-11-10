@@ -1,7 +1,7 @@
 {
   "name": "apinoa",
   "displayName": "apinoa",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Amazon, Walmart, Shopify, TikTok, Instagram, YouTube, Reddit, Facebook, Google, Bing, Naver, ChatGPT, Gemini, Copilot and more as normalized JSON: product data, social posts, search results, AI answers and company tech stacks through one API, with a skill per family and the apinoa MCP server.",
   "author": {
     "name": "apinoa",

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9
+
+- `apinoa-social`: an Instagram video post now states `metrics.views` (one more unit); YouTube `post` takes `include=watch` (subscribers, comment count, hashtags and mentions, one more unit).
+
 ## 0.1.8
 
 - `apinoa-social`: a sound's own audio file — `group` with `sound` returns the track (`audio.url`, title, artist, length) for TikTok and Instagram.
