@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7
+
+- New skill `apinoa-ocr`: the OCR API (`POST /v1/ocr`), the text in an image with each region's position and confidence, one credit per image.
+- `apinoa-image-translate` covers translation only; reading text without translating it moved to `apinoa-ocr`.
+
 ## 0.1.6
 
 - New skill `apinoa-company`: a website's technologies and the vendors its domain holds accounts with, from the domain.

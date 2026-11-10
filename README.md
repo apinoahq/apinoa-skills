@@ -14,6 +14,7 @@ key, so a coding agent calls it instead of writing and maintaining a scraper. Fa
 | [`apinoa-answers`](skills/apinoa-answers/SKILL.md) | AI-engine answers with their sources and the brands they mention |
 | [`apinoa-company`](skills/apinoa-company/SKILL.md) | What a company's website runs on, and the vendors its domain holds accounts with |
 | [`apinoa-image-translate`](skills/apinoa-image-translate/SKILL.md) | Translating the text inside images, such as product photos |
+| [`apinoa-ocr`](skills/apinoa-ocr/SKILL.md) | Reading the text in images (OCR): every region with its text, confidence and position |
 
 You need an API key: create one at [apinoa.com/en/dashboard/api-keys](https://apinoa.com/en/dashboard/api-keys).
 
