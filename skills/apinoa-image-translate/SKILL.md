@@ -74,3 +74,4 @@ open("translated.jpg", "wb").write(translated)
 - Markdown docs: `https://apinoa.com/en/docs-raw/api-reference/image-translate` (+ `/translate`, `/supported-fonts`, `/custom-fonts`); index https://apinoa.com/llms.txt
 - To read the text without replacing it (OCR), use the `apinoa-ocr` skill: `POST /v1/ocr`, one credit per image.
 - MCP: `apinoa-mcp` has a `translate_image` tool: `claude mcp add apinoa -e APINOA_API_KEY=your_key -- npx -y apinoa-mcp`, or hosted with OAuth sign-in: `claude mcp add --transport http apinoa https://api.apinoa.com/mcp`.
+- A call failed, data came back wrong or missing, or an API you need does not exist: report it with `POST https://gateway.apinoa.com/v1/feedback` (JSON `type`, `message`, and the `platform`, `operation`, `params` and `requestId` of the call; free, no key needed) or the MCP tool `send_feedback`, and read our reply at `GET /v1/feedback/{id}`. Docs: `https://apinoa.com/en/docs-raw/api-reference/feedback`.

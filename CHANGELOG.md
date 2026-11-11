@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.14
+
+- Every skill says how to report a failed call, wrong or missing data, or an API you need: `POST /v1/feedback` or the MCP tool `send_feedback`, free and without a key, with the reply at `GET /v1/feedback/{id}`.
+
 ## 0.1.13
 
 - `apinoa-answers` covers ByteDance Dola (`dola`): ten countries, follow-ups with `conversation`. Dola lists its sources but does not tie them to sentences, so `citations` is empty and `cited` is false.
