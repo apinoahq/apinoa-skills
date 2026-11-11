@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.10
+
+- `apinoa-social`: Instagram `post` takes `include=audio` (the sound's file and full length, one more unit); YouTube comments take `sort=top|recent` (top is the default; recent is one more unit).
+
 ## 0.1.9
 
 - `apinoa-social`: an Instagram video post now states `metrics.views` (one more unit); YouTube `post` takes `include=watch` (subscribers, comment count, hashtags and mentions, one more unit).
