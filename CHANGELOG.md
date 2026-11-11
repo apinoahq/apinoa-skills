@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.13
+
+- `apinoa-answers` covers ByteDance Dola (`dola`): ten countries, follow-ups with `conversation`. Dola lists its sources but does not tie them to sentences, so `citations` is empty and `cited` is false.
+
 ## 0.1.12
 
 - `apinoa-social`: the small extra requests no longer cost extra units: Instagram video views and sound, YouTube channel About and @handle lookup, the watch page beside a video, TikTok username and hashtag-name lookups, LinkedIn company-name lookups. Only TikTok `media` (2) and Reddit's extras still add units.
