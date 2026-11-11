@@ -29,8 +29,8 @@ One HTTP call returns a social platform's public data as normalized JSON. Eight 
 Per platform:
 
 - `tiktok`: all eight. posts `username`/`userId` (`type=posts|reposts|likes`), `hashtag`, `sound`, `playlist`, nothing = explore; profiles `type=followers|following`; groups = playlists; media `post` (+`index`).
-- `instagram`: profile, post (shortcode; a video's `metrics.views` is one more unit; `include=audio` adds the sound's file and full length, one more), posts `username` (`type=posts|reels`), `hashtag`, `location`; comments (newest first only); group `hashtag`/`location`/`sound` (the audio file); groups `type=highlights`.
-- `youtube`: profile (`include=about`), profiles `query`, post (`include=watch`: subscribers, comment count, hashtags/mentions), posts `username`/`userId` (`type=videos|shorts|live|community`), `query`, `hashtag`, `relatedTo`, nothing = trending (`country`); comments (`sort=top|recent`, top by default; recent is one more unit); groups = playlists.
+- `instagram`: profile, post (shortcode; a video's `metrics.views` is included; `include=audio` adds the sound's file and full length), posts `username` (`type=posts|reels`), `hashtag`, `location`; comments (newest first only); group `hashtag`/`location`/`sound` (the audio file); groups `type=highlights`.
+- `youtube`: profile (`include=about`), profiles `query`, post (subscribers, comment count and hashtags/mentions included), posts `username`/`userId` (`type=videos|shorts|live|community`), `query`, `hashtag`, `relatedTo`, nothing = trending (`country`); comments (`sort=top|recent`, top by default); groups = playlists.
 - `reddit`: profile (`include=trophies`), profiles `query`, post, posts `username`, `community`, `query`, `ids`, nothing = popular, with `sort`/`period`; comments `post` or `username`; group `community` (`include=rules`); groups `query`/`prefix`/`username`.
 - `x`: profile, post, posts `username`/`userId`, group `community`.
 - `threads`: profile, post, posts `username` (`type=posts|reposts|replies`), `query`, `hashtag`; comments.
@@ -74,7 +74,7 @@ res = client.youtube.posts(username="@mkbhd", type="shorts")  # snake_case: user
 
 - Next page: the same operation with `cursor` alone; no `cursor` = last page.
 - `404 NOT_FOUND` (missing, private, deleted or age-restricted), `400 INVALID_PARAMS`/`INVALID_CURSOR`, `400 VIDEO_TOO_LARGE` (over 64 MB), `402 INSUFFICIENT_BALANCE` (top up; do not retry). Retry `429` after `Retry-After`, `502`/`503` with backoff. Failed calls are not billed.
-- $0.001 per unit (most calls are one unit; the catalog's `cost` gives each operation's units). TikTok `media` is 2; TikTok `userId` instead of `username` saves one; `include=rules`, `include=trophies`, YouTube `include=about`, `include=watch` and comments `sort=recent`, and an Instagram video post's views and `include=audio` add one each. The rate steps down as a UTC day's volume grows (https://apinoa.com/pricing).
+- $0.001 per unit (most calls are one unit; the catalog's `cost` gives each operation's units). TikTok `media` is 2; TikTok `userId` instead of `username` saves one; `include=rules`, `include=trophies`, and YouTube `include=about` add one. The rate steps down as a UTC day's volume grows (https://apinoa.com/pricing).
 
 ## More
 

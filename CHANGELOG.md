@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11
+
+- `apinoa-social`: Instagram video views, Instagram `include=audio`, YouTube's watch-page fields (subscribers, comment count, hashtags) and YouTube comments `sort=recent` no longer cost an extra unit.
+
 ## 0.1.10
 
 - `apinoa-social`: Instagram `post` takes `include=audio` (the sound's file and full length, one more unit); YouTube comments take `sort=top|recent` (top is the default; recent is one more unit).
