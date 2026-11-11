@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.12
+
+- `apinoa-social`: the small extra requests no longer cost extra units: Instagram video views and sound, YouTube channel About and @handle lookup, the watch page beside a video, TikTok username and hashtag-name lookups, LinkedIn company-name lookups. Only TikTok `media` (2) and Reddit's extras still add units.
+
 ## 0.1.11
 
 - `apinoa-social`: Instagram video views, Instagram `include=audio`, YouTube's watch-page fields (subscribers, comment count, hashtags) and YouTube comments `sort=recent` no longer cost an extra unit.
