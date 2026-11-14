@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.15
+
+- `apinoa-social`: YouTube `media[].url` is the video's watch page, not a file. To save the video, pass it to yt-dlp. `media[].durationSec` is the length.
+- `apinoa-social`: a Reddit `query` search returns the comment that matched (`ext.searchMatch`). Its first page also lists the communities, profiles and related searches Reddit shows beside the posts (`ext.communities`, `ext.profiles`, `ext.relatedSearches`), at no extra unit.
+
 ## 0.1.14
 
 - Every skill says how to report a failed call, wrong or missing data, or an API you need: `POST /v1/feedback` or the MCP tool `send_feedback`, free and without a key, with the reply at `GET /v1/feedback/{id}`.
