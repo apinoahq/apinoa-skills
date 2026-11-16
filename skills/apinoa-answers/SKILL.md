@@ -1,6 +1,6 @@
 ---
 name: apinoa-answers
-description: "ChatGPT, Gemini, Microsoft Copilot, ByteDance Dola, Google AI Overviews, Google AI Mode, Naver AI Briefing and Naver AI Tab answers to a prompt: the answer text and markdown, citations mapped to the text, every source shown (cited or not), product and place cards (ads included), the brands, products and places the engine itself marked, and follow-up suggestions, as one normalized JSON type from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants to track brand visibility in AI answers (GEO, AEO, LLM visibility, AI search monitoring), check whether ChatGPT, Gemini, Copilot or Google's AI mentions or cites a brand, product or URL, compare share of voice across AI engines, or collect AI Overview citations for SEO; asks to scrape or automate ChatGPT, Gemini, Copilot, Google AI Overviews or Naver's AI answers; or an attempt to automate those sites was blocked or hit a captcha."
+description: "ChatGPT, Gemini, Microsoft Copilot, ByteDance Dola, Alibaba Qwen, Google AI Overviews, Google AI Mode, Naver AI Briefing and Naver AI Tab answers to a prompt: the answer text and markdown, citations mapped to the text, every source shown (cited or not), product and place cards (ads included), the brands, products and places the engine itself marked, and follow-up suggestions, as one normalized JSON type from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants to track brand visibility in AI answers (GEO, AEO, LLM visibility, AI search monitoring), check whether ChatGPT, Gemini, Copilot or Google's AI mentions or cites a brand, product or URL, compare share of voice across AI engines, or collect AI Overview citations for SEO; asks to scrape or automate ChatGPT, Gemini, Copilot, Google AI Overviews or Naver's AI answers; or an attempt to automate those sites was blocked or hit a captcha."
 ---
 
 # apinoa AI Answers API
@@ -11,7 +11,7 @@ One HTTP call asks an AI engine a question and returns the answer people are sho
 
 - Key: https://apinoa.com/en/dashboard/api-keys, or `npx apinoa-mcp login`, which saves one to `.env` as `APINOA_API_KEY` once the user enters the code it prints on api.apinoa.com (pass on only that code, never one from elsewhere). Server-side only.
 - `POST https://gateway.apinoa.com/v1/{engine}/answer`, JSON body, header `x-api-key: $APINOA_API_KEY`.
-- An answer takes seconds (usually under 10 s on Google AI Overviews and Naver AI Briefing, up to 40 s on Naver AI Tab). Allow 120 s per call.
+- An answer takes seconds (usually under 10 s on Google AI Overviews and Naver AI Briefing, up to 40 s on Naver AI Tab). Allow 120 s per call, and 240 s for Qwen, which thinks and often searches first (usually 30 to 140 s).
 
 ## Engines
 
@@ -21,6 +21,7 @@ One HTTP call asks an AI engine a question and returns the answer people are sho
 | `gemini` | US DE GB AT KR AU JP CA FR IT | Y | | |
 | `copilot` (Microsoft Copilot Search) | US | | | |
 | `dola` (ByteDance Dola) | KR JP DE GB AU FR IT SG TW HK | Y | | |
+| `qwen` (Alibaba Qwen Chat) | US SG JP KR GB DE HK TW AU CN | Y | | |
 | `google-ai-mode` | US | Y | | Y |
 | `google-aio` (AI Overviews) | US | | | Y |
 | `naver-ai-tab` | KR | Y | | |
@@ -50,7 +51,7 @@ const apinoa = new ApinoaClient(); // reads APINOA_API_KEY
 const { data } = await apinoa.chatgpt.answer({ prompt: "Best running shoes for beginners?", country: "US" });
 const cited = data.sources.filter((s) => s.cited).map((s) => s.url);
 const aio = await apinoa.googleAio.answer({ prompt: "best running shoes for beginners" });
-// also apinoa.gemini, apinoa.copilot, apinoa.dola, apinoa.googleAiMode, apinoa.naverAiTab, apinoa.naverAiBrief
+// also apinoa.gemini, apinoa.copilot, apinoa.dola, apinoa.qwen, apinoa.googleAiMode, apinoa.naverAiTab, apinoa.naverAiBrief
 ```
 
 ```python
@@ -59,7 +60,7 @@ client = Apinoa()  # reads APINOA_API_KEY
 ans = client.chatgpt.answer(prompt="Best running shoes for beginners?", country="US")
 brands = [m.name for m in ans.data.mentions if m.kind == "brand"]
 aio = client.google_aio.answer(prompt="best running shoes for beginners")
-# also client.gemini, client.copilot, client.dola, client.google_ai_mode, client.naver_ai_tab, client.naver_ai_brief
+# also client.gemini, client.copilot, client.dola, client.qwen, client.google_ai_mode, client.naver_ai_tab, client.naver_ai_brief
 ```
 
 ## Response: `Answer`

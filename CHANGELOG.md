@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.16
+
+- `apinoa-answers` covers Alibaba Qwen Chat (`qwen`): ten countries including mainland China, follow-ups with `conversation`, citations tied to the text. Qwen thinks and often searches before it answers: allow 240 s.
+
 ## 0.1.15
 
 - `apinoa-social`: YouTube `media[].url` is the video's watch page, not a file. To save the video, pass it to yt-dlp. `media[].durationSec` is the length.
