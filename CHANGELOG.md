@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.19
+
+- `apinoa-answers`: Meta AI is an engine, `meta-ai` (`POST /v1/meta-ai/answer`). It declines some prompts, shopping questions among them, with `outcome: "refused"`.
+
 ## 0.1.18
 
 - `apinoa-answers`: ByteDance's engine is the platform `doubao` (`POST /v1/doubao/answer`). `dola`, its former id, still answers.
