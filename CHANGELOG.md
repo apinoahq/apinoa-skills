@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.18
+
+- `apinoa-answers`: ByteDance's engine is the platform `doubao` (`POST /v1/doubao/answer`). `dola`, its former id, still answers.
+
 ## 0.1.17
 
 - `apinoa-answers` names the `dola` engine Doubao (豆包), ByteDance's name for it. The platform id `dola` is unchanged.

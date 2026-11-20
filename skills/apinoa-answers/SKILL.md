@@ -20,7 +20,7 @@ One HTTP call asks an AI engine a question and returns the answer people are sho
 | `chatgpt` | US DE GB AT KR AU JP CA FR IT | Y | Y | |
 | `gemini` | US DE GB AT KR AU JP CA FR IT | Y | | |
 | `copilot` (Microsoft Copilot Search) | US | | | |
-| `dola` (ByteDance Doubao) | KR JP DE GB AU FR IT SG TW HK | Y | | |
+| `doubao` (ByteDance Doubao) | KR JP DE GB AU FR IT SG TW HK | Y | | |
 | `qwen` (Alibaba Qwen Chat) | US SG JP KR GB DE HK TW AU CN | Y | | |
 | `google-ai-mode` | US | Y | | Y |
 | `google-aio` (AI Overviews) | US | | | Y |
@@ -51,7 +51,7 @@ const apinoa = new ApinoaClient(); // reads APINOA_API_KEY
 const { data } = await apinoa.chatgpt.answer({ prompt: "Best running shoes for beginners?", country: "US" });
 const cited = data.sources.filter((s) => s.cited).map((s) => s.url);
 const aio = await apinoa.googleAio.answer({ prompt: "best running shoes for beginners" });
-// also apinoa.gemini, apinoa.copilot, apinoa.dola, apinoa.qwen, apinoa.googleAiMode, apinoa.naverAiTab, apinoa.naverAiBrief
+// also apinoa.gemini, apinoa.copilot, apinoa.doubao, apinoa.qwen, apinoa.googleAiMode, apinoa.naverAiTab, apinoa.naverAiBrief
 ```
 
 ```python
@@ -60,7 +60,7 @@ client = Apinoa()  # reads APINOA_API_KEY
 ans = client.chatgpt.answer(prompt="Best running shoes for beginners?", country="US")
 brands = [m.name for m in ans.data.mentions if m.kind == "brand"]
 aio = client.google_aio.answer(prompt="best running shoes for beginners")
-# also client.gemini, client.copilot, client.dola, client.qwen, client.google_ai_mode, client.naver_ai_tab, client.naver_ai_brief
+# also client.gemini, client.copilot, client.doubao, client.qwen, client.google_ai_mode, client.naver_ai_tab, client.naver_ai_brief
 ```
 
 ## Response: `Answer`
