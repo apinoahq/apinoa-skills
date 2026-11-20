@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.17
+
+- `apinoa-answers` names the `dola` engine Doubao (豆包), ByteDance's name for it. The platform id `dola` is unchanged.
+
 ## 0.1.16
 
 - `apinoa-answers` covers Alibaba Qwen Chat (`qwen`): ten countries including mainland China, follow-ups with `conversation`, citations tied to the text. Qwen thinks and often searches before it answers: allow 240 s.

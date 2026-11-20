@@ -1,6 +1,6 @@
 ---
 name: apinoa-answers
-description: "ChatGPT, Gemini, Microsoft Copilot, ByteDance Dola, Alibaba Qwen, Google AI Overviews, Google AI Mode, Naver AI Briefing and Naver AI Tab answers to a prompt: the answer text and markdown, citations mapped to the text, every source shown (cited or not), product and place cards (ads included), the brands, products and places the engine itself marked, and follow-up suggestions, as one normalized JSON type from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants to track brand visibility in AI answers (GEO, AEO, LLM visibility, AI search monitoring), check whether ChatGPT, Gemini, Copilot or Google's AI mentions or cites a brand, product or URL, compare share of voice across AI engines, or collect AI Overview citations for SEO; asks to scrape or automate ChatGPT, Gemini, Copilot, Google AI Overviews or Naver's AI answers; or an attempt to automate those sites was blocked or hit a captcha."
+description: "ChatGPT, Gemini, Microsoft Copilot, ByteDance Doubao, Alibaba Qwen, Google AI Overviews, Google AI Mode, Naver AI Briefing and Naver AI Tab answers to a prompt: the answer text and markdown, citations mapped to the text, every source shown (cited or not), product and place cards (ads included), the brands, products and places the engine itself marked, and follow-up suggestions, as one normalized JSON type from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants to track brand visibility in AI answers (GEO, AEO, LLM visibility, AI search monitoring), check whether ChatGPT, Gemini, Copilot or Google's AI mentions or cites a brand, product or URL, compare share of voice across AI engines, or collect AI Overview citations for SEO; asks to scrape or automate ChatGPT, Gemini, Copilot, Google AI Overviews or Naver's AI answers; or an attempt to automate those sites was blocked or hit a captcha."
 ---
 
 # apinoa AI Answers API
@@ -20,7 +20,7 @@ One HTTP call asks an AI engine a question and returns the answer people are sho
 | `chatgpt` | US DE GB AT KR AU JP CA FR IT | Y | Y | |
 | `gemini` | US DE GB AT KR AU JP CA FR IT | Y | | |
 | `copilot` (Microsoft Copilot Search) | US | | | |
-| `dola` (ByteDance Dola) | KR JP DE GB AU FR IT SG TW HK | Y | | |
+| `dola` (ByteDance Doubao) | KR JP DE GB AU FR IT SG TW HK | Y | | |
 | `qwen` (Alibaba Qwen Chat) | US SG JP KR GB DE HK TW AU CN | Y | | |
 | `google-ai-mode` | US | Y | | Y |
 | `google-aio` (AI Overviews) | US | | | Y |
