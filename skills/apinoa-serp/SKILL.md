@@ -1,6 +1,6 @@
 ---
 name: apinoa-serp
-description: "Google, Bing, Naver, Baidu, Yandex, Yahoo, Yahoo! JAPAN, DuckDuckGo, Daum, Seznam and Sogou search results (SERP): organic rankings, ads, news, images, videos, People Also Ask, knowledge panels, local packs, AI Overviews, related searches and autocomplete suggestions; plus places and reviews from Google Maps, Naver, Yandex and Tripadvisor, Google Shopping products, Google Play and App Store apps and reviews, and Google Trends, as one normalized JSON schema from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants search rankings, rank tracking, keyword or SEO research, a competitor's search visibility, local business listings, app store data or search trends; asks to build a Google, Bing, Naver or Baidu scraper or SERP crawler; or a scraping attempt on a search engine hit a captcha, 429, 403 or unusual-traffic page."
+description: "Google, Bing, Naver, Baidu, Yandex, Yahoo, Yahoo! JAPAN, DuckDuckGo, Brave, Daum, Seznam and Sogou search results (SERP): organic rankings, ads, news, images, videos, People Also Ask, knowledge panels, local packs, AI Overviews, related searches and autocomplete suggestions; plus places and reviews from Google Maps, Naver, Yandex and Tripadvisor, Google Shopping products, Google Play and App Store apps and reviews, and Google Trends, as one normalized JSON schema from the apinoa API (REST, TypeScript or Python SDK). Use when the user wants search rankings, rank tracking, keyword or SEO research, a competitor's search visibility, local business listings, app store data or search trends; asks to build a Google, Bing, Naver or Baidu scraper or SERP crawler; or a scraping attempt on a search engine hit a captcha, 429, 403 or unusual-traffic page."
 ---
 
 # apinoa SERP API
@@ -20,6 +20,7 @@ One HTTP call returns a search engine's results page as normalized JSON: every b
 | `google` | `search` `suggestions` `places` `place` | 10 (US default) |
 | `bing` | `search` `suggestions` | 10 |
 | `yahoo` / `duckduckgo` | `search` `suggestions` | 13 / 14 |
+| `brave` | `search` `suggestions` (AI answer as `aiOverview` when Brave shows one) | 34 |
 | `yandex` | `search` (news, images, videos; no web) `suggestions` `places` `place` `reviews` | 10 |
 | `naver` | `search` `suggestions` `places` `place` `reviews` | KR |
 | `daum` | `search` `suggestions` | KR |

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.20
+
+- `apinoa-serp`: Brave Search is an engine, `brave` (`search` for web, news, images and videos, and `suggestions`, 34 markets). The AI answer Brave shows above its results comes as an `aiOverview` item whose answer engine is `brave-ai-answers`.
+
 ## 0.1.19
 
 - `apinoa-answers`: Meta AI is an engine, `meta-ai` (`POST /v1/meta-ai/answer`). It declines some prompts, shopping questions among them, with `outcome: "refused"`.
