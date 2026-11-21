@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.23
+
+- `apinoa-social`: Reddit's newest comments of a community (`comments?community=`), comment search (`comments?query=`), posts by linked site (`posts?domain=`), related posts and crossposts (`posts?relatedTo=`), media search (`type=media`), the front page (`sort=best`), several communities joined by `+`, the community and profile directories (`groups?type=`, `profiles?type=`), the communities a user moderates, and a community's widgets and wiki (`group?include=`).
+
 ## 0.1.22
 
 - `apinoa-serp`: Brave Search is no longer offered.
