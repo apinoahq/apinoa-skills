@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.21
+
+- `apinoa-answers`: Baidu Wenxin (文心助手) is an engine, `baidu-wenxin` (`POST /v1/baidu-wenxin/answer`), asked from CN, US, KR or JP. It answers mostly in Chinese and lists every page it read in `sources` (none `cited`: the answer has no citation marks).
+
 ## 0.1.20
 
 - `apinoa-serp`: Brave Search is an engine, `brave` (`search` for web, news, images and videos, and `suggestions`, 34 markets). The AI answer Brave shows above its results comes as an `aiOverview` item whose answer engine is `brave-ai-answers`.
